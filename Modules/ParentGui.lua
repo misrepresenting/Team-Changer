@@ -2,7 +2,6 @@ local HTTPService = game:GetService("HttpService")
 local CoreGui = game:GetService("CoreGui")
 
 return function(Gui)
-	print(HTTPService)
 	Gui.Name = HTTPService:GenerateGUID(false):gsub('-', ''):sub(1, math.random(25, 30))
 
 	if ((not is_sirhurt_closure) and (syn and syn.protect_gui)) then
