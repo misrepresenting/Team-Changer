@@ -2,7 +2,7 @@
 This plugin is for changing team using spawn location (Only work if there is spawn locations that allowed to change team on touched)
 
 + ;teamgui
- > Open the gui made by me c:
+ > Open the gui made by misrepresenting c:
 + ;noteamgui / closeteamgui
  > Close the gui
  
