@@ -57,3 +57,5 @@ for Team, SpawnPoint in pairs(TeamFunctions.FindAvailableTeams()) do
 	
 	ScrollingFrame.CanvasSize = ScrollingFrame.CanvasSize + UDim2.fromOffset(0, TeamButton.Size.Y.Offset + Padding)
 end
+	
+return GUI
