@@ -12,7 +12,7 @@ local function Import(Asset)
 		local Link = string.format("https://raw.githubusercontent.com/misrepresenting/Team-Changer/main/Modules/%s", Asset)
 		local Response = game:HttpGetAsync(Link)
 
-		local Function = loadstring(Response.Body)
+		local Function = loadstring(Response)
 		local Success, Return = pcall(Function)
 
 		if (Success) then
@@ -34,8 +34,10 @@ local Padding = ScrollingFrame.UIListLayout.Padding.Offset
 
 local UIFunctions = Import("UIFunctions.lua")
 local TeamFunctions = Import("TeamFunctions.lua")
+local ParentGui = Import("ParentGui.lua")
 local Assets = GUI.Assets
 
+ParentGui(GUI)
 UIFunctions.Draggable(Main)
 UIFunctions.SmoothScroll(ScrollingFrame, .14)
 
@@ -55,5 +57,3 @@ for Team, SpawnPoint in pairs(TeamFunctions.FindAvailableTeams()) do
 	
 	ScrollingFrame.CanvasSize = ScrollingFrame.CanvasSize + UDim2.fromOffset(0, TeamButton.Size.Y.Offset + Padding)
 end
-
-        
