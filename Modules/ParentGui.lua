@@ -1,3 +1,6 @@
+local HTTPService = game:GetService("HttpService")
+local CoreGui = game:GetService("CoreGui")
+
 return function(Gui)
 	Gui.Name = HTTPService:GenerateGUID(false):gsub("-",""):sub(1,math.random(25,30))
 
